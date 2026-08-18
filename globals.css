@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #D0D0D0;
+  
+  --brand-black-deep: #050505;
+  --brand-black-rich: #0A0A0A;
+  --brand-black-graphite: #111111;
+  --brand-gold-premium: #D4AF37;
+  --brand-gold-bright: #F5C542;
+  --brand-gold-dark: #8A6816;
+  --brand-silver-metallic: #C8CBD0;
+  --brand-silver-light: #E8E9EB;
+  --brand-silver-dark: #6F7378;
+  --brand-blue-electric: #146BFF;
+  --brand-blue-bright: #2F80FF;
+  --brand-text-white: #FFFFFF;
+  --brand-text-primary-gray: #D0D0D0;
+  --brand-text-secondary-gray: #8A8A8A;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-brand-black-deep: var(--brand-black-deep);
+  --color-brand-black-rich: var(--brand-black-rich);
+  --color-brand-black-graphite: var(--brand-black-graphite);
+  --color-brand-gold-premium: var(--brand-gold-premium);
+  --color-brand-gold-bright: var(--brand-gold-bright);
+  --color-brand-gold-dark: var(--brand-gold-dark);
+  --color-brand-silver-metallic: var(--brand-silver-metallic);
+  --color-brand-silver-light: var(--brand-silver-light);
+  --color-brand-silver-dark: var(--brand-silver-dark);
+  --color-brand-blue-electric: var(--brand-blue-electric);
+  --color-brand-blue-bright: var(--brand-blue-bright);
+  --color-brand-text-white: var(--brand-text-white);
+  --color-brand-text-primary-gray: var(--brand-text-primary-gray);
+  --color-brand-text-secondary-gray: var(--brand-text-secondary-gray);
+  
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism panel styling */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 15, 15, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(212, 175, 55, 0.03);
+}
+
+.glass-panel-blue {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(20, 107, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(20, 107, 255, 0.03);
+}
+
+/* Metallic Gradients and Text styles */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F5C542 0%, #D4AF37 50%, #8A6816 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(135deg, #E8E9EB 0%, #C8CBD0 50%, #6F7378 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-blue-gradient {
+  background: linear-gradient(135deg, #2F80FF 0%, #146BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F5C542 0%, #D4AF37 100%);
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(135deg, #2F80FF 0%, #146BFF 100%);
+}
+
+.border-gold-glow {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.08);
+}
+
+.border-blue-glow {
+  border: 1px solid rgba(20, 107, 255, 0.3);
+  box-shadow: 0 0 15px rgba(20, 107, 255, 0.08);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A2A2A;
+}
+
+/* Grid & terminal effects */
+.terminal-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+}
+
+/* Transition speed utilities */
+.transition-all-custom {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
